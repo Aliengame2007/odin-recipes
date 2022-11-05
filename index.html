@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Odin Recipes</title>
+    <link rel="icon" type="image/x-icon" href="/images/food.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container-header">
+                <a href="index.html"><svg class="logo" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M14.25 44V25.6q-2.6-.55-4.425-2.625Q8 20.9 8 18V4h3v14h3.25V4h3v14h3.25V4h3v14q0 2.9-1.825 4.975Q19.85 25.05 17.25 25.6V44ZM35 44V28h-5.75V12.75q0-3.95 2.4-6.35Q34.05 4 38 4v40Z"/></svg></a>
+                <h1 class="title | fs-heading fw-bold"><a href="index.html">Odin Recipes</a></h1>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="fs-nav-li"><a href="#">Recipes</a></li>
+                    <li class="fs-nav-li"><a href="#about-section">About</a></li>
+                    <li class="fs-nav-li"><a href="#the-odin-project-section">The Odin Project</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="recipe-section" class="recipe-section">
+            <div class="recipe-img-container">
+                <img class="recipe-img" src="images/lasagna.jpg" width="200px">
+                <img class="recipe-img-landscape" src="images/lasagna-landscape.jpg">
+            </div>
+            <div class="recipe-text">
+                <h2 class="left-heading">Lasagna</h2>
+                <p class="left-paragraph">This is my mom's special homemade lasagna recipe with a meaty, made-from-scratch tomato sauce and a deliciously cheesy filling. <span class="responsive-span">A more traditional homemade lasagna filling would be made with ricotta but my mom's recipe calls for a blend of small-curd cottage cheese and Parmesan. I have found none better anywhere.</span></p>
+                <button class="learn-btn-left"><a href="recipes/lasagna.html">Learn more</a></button>
+            </div>
+        </section>
+        <section class="recipe-section">
+            <div class="recipe-img-container">
+                <img class="recipe-img-landscape" src="images/dumplings-landscape.jpg">
+            </div>
+            <div class="recipe-text">
+                <h2 class="right-heading">Dumplings</h2>
+                <p class="right-paragraph">These tasty steamed pork dumplings make a perfect appetizer for a party or you can serve them as a main dish. <span class="responsive-span">Serve with hoisin sauce, hot Chinese-style mustard, and toasted sesame seeds. If you're looking for the best steamed pork dumplings recipe on the internet, you've come to the right place. These pork dumplings are as easy to assemble and steam as they are to eat.</span></p>
+                <button class="learn-btn-right"><a href="recipes/dumplings.html">Learn more</a></button>
+            </div>
+            <div class="recipe-img-container">
+                <img class="recipe-img" src="images/dumplings.jpg" width="200px">
+            </div>
+        </section>
+        <section class="recipe-section">
+            <div class="recipe-img-container">
+                <img class="recipe-img" src="images/chicken-curry.jpg" width="200px">
+                <img class="recipe-img-landscape" src="images/chicken-curry-landscape.jpg">
+            </div>
+            <div class="recipe-text">
+                <h2 class="left-heading">Chicken Curry</h2>
+                <p class="left-paragraph">This Indian-inspired creamy chicken curry recipe is similar to a curry I had in India. The aromatic spices and flavors are a delight to the senses! <span class="responsive-span">Delicious with fresh naan and basmati rice. You don't need to leave the house to enjoy satisfying Indian chicken curry. With this recipe, you can have a restaurant-worthy meal on the table in under an hour.</span></p>
+                <button class="learn-btn-left"><a href="recipes/chicken-curry.html">Learn more</a></button>
+            </div>
+        </section>
+
+        <section id="about-section" class="about-section">
+            <div>
+                <h2>About Odin Recipes</h2>
+                <p>Odin Recipes loves cooking. This project is meant to give you the possibility to discover new recipes and learn how to cook them. One of the main goals of Odin Recipes is to provide you recipes from all sort of cultures. From Italian to Indian to Chinese, you will be able to find the recipe that suits you the best. The process to cook the recipe is accurately described step by step, which can be understood by everybody. Once you have reached the goal of cooking the recipe you wanted, we invite you to tag us on Twitter, Instagram and Facebook.</p>
+            </div>
+            <div class="about-me-section">
+                <div>
+                    <img class="profile-img" src="images/profile-image.jpeg" width="200px">
+                    <img class="profile-img-landscape" src="images/profile-image-landscape.JPG">
+                </div>
+                <div>
+                    <h2 class="about-me-heading">About me</h2>
+                    <p class="about-me-paragraph">I am an italian high school student with a particular interest in coding and programming. My web development journey started in March 2022 and I'm always looking forward to learn new skills.</p>
+                </div>
+            </div>
+        </section>
+        <section id="the-odin-project-section" class="the-odin-project-section">
+            <h2 class="the-odin-project-heading">The Odin Project</h2>
+            <p class="the-odin-project-paragraph">In my opinion, The Odin Project is one of the best platforms to learn web development on the Internet. I started my coding journey alone, without any previous expierence. One of the greatest things about the Odin Project is the fact that is completely free. This platform provides you a full package that will allow you to enter the world of programming with great knowledge and useful skills. With the Odin Project you will learn through articles and various pieces of online documentation. And last but not least, is the possibility to build projects. Through these projects, you will indeed become a better programmer accumulationg every time more experience.</p>
+            <a href="https://www.theodinproject.com/about" target="_blank">
+                <img class="the-odin-project-logo" src="images/the-odin-project-logo.png" width="200px">
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo-container-footer">
+                <a href="index.html"><svg class="logo" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M14.25 44V25.6q-2.6-.55-4.425-2.625Q8 20.9 8 18V4h3v14h3.25V4h3v14h3.25V4h3v14q0 2.9-1.825 4.975Q19.85 25.05 17.25 25.6V44ZM35 44V28h-5.75V12.75q0-3.95 2.4-6.35Q34.05 4 38 4v40Z"/></svg></a>
+                <h1 class="title | fs-heading fw-heading"><a href="index.html">Odin Recipes</a></h1>
+            </div>
+            <nav>
+                <ul class="footer-list">
+                    <li class="fs-li"><a href="#">Recipes</a></li>
+                    <li class="fs-li"><a href="#about-section">About</a></li>
+                    <li class="fs-li"><a href="#the-odin-project-section">The Odin Project</a></li>
+                </ul>
+            </nav>
+            <div>
+                <p>Made by Paolo Re</p>
+                <p class="fs-copyright fw-semi-bold">Copyright 2022</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

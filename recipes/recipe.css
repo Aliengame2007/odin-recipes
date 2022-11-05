@@ -1,0 +1,220 @@
+:root {
+    --clr-400: hsl(0, 2%, 25%);
+    --clr-neutral: hsl(0, 0%, 95%);
+    --clr-special: hsl(268, 50%, 60%);
+
+    --ff-primary: 'Poppins', sans-serif;
+
+    --fs-200: 0.75rem;
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.5rem;
+    --fs-600: 2rem;
+
+    --fw-regular: 400;
+    --fw-semibold: 500;
+    --fw-bold: 600;
+}
+
+/* General Styling */
+
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: var(--ff-primary);
+    color: var(--clr-400);
+    background-color: var(--clr-special);
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-400);
+    transition: all 0.3s;
+}
+
+section {
+    width: 75%;
+    margin: 3rem auto;
+}
+
+/* Image Section */
+
+.img-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.recipe-img {
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 0.125rem solid var(--clr-neutral);
+    padding: 0.25rem;
+    transition: all 0.3s;
+}
+
+.recipe-img:hover {
+    scale: 1.1;
+}
+
+.main-heading {
+    color: var(--clr-neutral);
+}
+
+/* Main */
+
+.main-bg {
+    width: 50%;
+    margin: auto;
+    background-color: var(--clr-neutral);
+    padding-bottom: 2rem;
+}
+
+@media(max-width: 1000px) {
+    .main-bg {
+        width: 60%;
+    }
+}
+
+@media(max-width: 800px) {
+    .main-bg {
+        width: 70%;
+    }
+}
+
+@media(max-width: 600px) {
+    .main-bg {
+        width: 80%;
+    }
+}
+
+@media(max-width: 500px) {
+    .main-bg {
+        width: 90%;
+    }
+}
+
+/* SVG Section */
+
+.svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-container > p {
+    margin-left: 1rem;
+}
+
+.top {
+    padding-top: 1rem;
+}
+
+path {
+    fill: var(--clr-special);
+}
+
+/* Ingredients Section */
+
+.ingredients {
+    padding-left: 0;
+}
+
+.ingredients > li {
+    margin-top: 1rem;
+}
+
+/* Directions Section*/
+
+.directions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    counter-reset: my-counter;
+}
+
+.directions > li {
+    counter-increment: my-counter;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.directions > li::before {
+    content: counter(my-counter);
+    position: absolute;
+    left: -3.5rem;
+    box-sizing: border-box;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--clr-special);
+    background-color: var(--clr-neutral);
+    border-radius: 50%;
+    border: 2px solid var(--clr-special);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+@media(max-width: 800px) {
+    .directions > li::before {
+        left: -3rem;
+    }
+}
+
+.directions > li:hover::before {
+    background-color: var(--clr-special);
+    color: var(--clr-neutral);
+}
+
+/* Nutrition Facts Section */
+
+.nutrition-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media(max-width: 1000px) {
+    .nutrition-container {
+        flex-direction: column;
+    }
+}
+
+.nutrition-list-container {
+    display: flex;
+}
+
+.nutrition-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nutrition-list > li {
+    margin-top: 0.5rem;
+}
+
+.list-data > li {
+    padding-left: 2rem;
+}
+
+/* Utility Classes */
+
+.fs-li {
+    font-size: var(--fs-400);
+}
+
+.fs-heading {
+    font-size: var(--fs-600);
+}
+
+.fs-copyright {
+    font-size: var(--fs-200);
+}
+
+.fw-semi-bold {
+    font-weight: var(--fw-semibold);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}

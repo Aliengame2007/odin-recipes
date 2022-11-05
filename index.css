@@ -1,0 +1,376 @@
+:root {
+    --clr-400: hsl(0, 2%, 25%);
+    --clr-neutral: hsl(0, 0%, 100%);
+    --clr-special: hsl(268, 50%, 60%);
+
+    --ff-primary: 'Poppins', sans-serif;
+
+    --fs-200: 0.75rem;
+    --fs-300: 0.875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.5rem;
+    --fs-600: 2rem;
+
+    --fw-regular: 400;
+    --fw-semibold: 500;
+    --fw-bold: 600;
+}
+
+/* General Styling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--ff-primary);
+    color: var(--clr-400);
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-400);
+    transition: all 0.3s;
+}
+
+h1 > a, button > a {
+    color: var(--clr-neutral);
+}
+
+a:hover {
+    color: var(--clr-neutral);
+}
+
+button:hover > a {
+    color: var(--clr-special);
+}
+
+/* Navigation */
+
+.header {
+    background-color: var(--clr-special);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-container-header {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+path {
+    fill: var(--clr-neutral);
+}
+
+.title {
+    padding: 0.25em 0 0.25em 1em;
+    color: var(--clr-neutral);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    gap: 2rem;
+}
+
+.nav-list > li {
+    position: relative;
+    padding: 0 0.3125rem;
+}
+
+.nav-list > li::after {
+    content: "";
+    position: absolute;
+    background-color: var(--clr-neutral);
+    height: 0.125rem;
+    width: 0;
+    left: 0;
+    top: 1.5625rem;
+    transition: 0.3s;
+}
+
+.nav-list >li:hover::after {
+    width: 100%;
+}
+
+@media(max-width: 800px) {
+    .header-container {
+        flex-direction: column;
+    }
+    .logo-container-header {
+        margin: auto;
+    }
+    .title {
+        padding-bottom: 0;
+    }
+    .nav-list li {
+        padding-top: 0;
+    }
+}
+
+/* Recipe Section General */
+
+.recipe-section {
+    width: 50%;
+    margin: 3rem auto;
+    display: flex;
+}
+
+.recipe-img {
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.recipe-img-landscape {
+    display: none;
+    width: 75%;
+    min-width: 200px;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.recipe-section:hover .recipe-img {
+    opacity: 1;
+}
+
+.recipe-section:hover .recipe-img-landscape {
+    opacity: 1;
+}
+
+/* Left Recipes Section */
+
+.left-heading {
+    margin-top: 0;
+    margin-left: 1rem;
+}
+
+.left-paragraph {
+    margin-left: 1rem;
+}
+
+.learn-btn-left {
+    margin-left: 1rem;
+    margin-top: 1.3rem;
+    font-family: var(--ff-primary);
+    cursor: pointer;
+    padding: 0.75em 1.25em;
+    color: var(--clr-neutral);
+    background-color: var(--clr-special);
+    border: 0.125rem solid var(--clr-special);
+    transition: all 0.3s;
+}
+
+.learn-btn-left:hover {
+    color: var(--clr-neutral);
+    background-color: var(--clr-neutral);
+}
+
+/* Right Recipes Section */
+
+.right-heading {
+    margin-top: 0;
+    margin-right: 1rem;
+}
+
+.right-paragraph {
+    margin-right: 1rem;
+}
+
+.learn-btn-right {
+    margin-right: 1rem;
+    font-family: var(--ff-primary);
+    cursor: pointer;
+    padding: 0.75em 1.25em;
+    color: var(--clr-neutral);
+    background-color: var(--clr-special);
+    border: 0.125rem solid var(--clr-special);
+    transition: all 0.3s;
+}
+
+.learn-btn-right:hover {
+    color: var(--clr-neutral);
+    background-color: var(--clr-neutral);
+}
+
+
+@media(max-width: 1000px) {
+    body {
+        text-align: center;
+    }
+    .recipe-section {
+        flex-direction: column;
+    }
+    .recipe-img {
+        display: none;
+    }
+    .recipe-img-landscape {
+        display: block;
+    }
+    .left-heading, .left-paragraph {
+        margin-left: 0;
+    }
+    .right-heading, .right-paragraph {
+        margin-right: 0;
+    }
+    .learn-btn-left, .learn-btn-right {
+        margin: auto;
+        margin-bottom: 2.5rem;
+    }
+    .responsive-span {
+        display: none;
+    }
+}
+
+/* About Section */
+
+.about-section {
+    width: 50%;
+    margin: 6rem auto;
+}
+
+.profile-img {
+    margin-top: 2rem;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.profile-img-landscape {
+    display: none;
+    width: 75%;
+    min-width: 200px;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.about-me-section {
+    display: flex;
+}
+
+.about-me-section:hover .profile-img {
+    opacity: 1;
+}
+
+.about-me-heading, .about-me-paragraph {
+    margin-left: 1rem;
+}
+
+@media(max-width: 1000px) {
+    .about-section {
+        width: 75%;
+    }
+    .about-me-section {
+        flex-direction: column;
+    }
+    .profile-img {
+        display: none;
+    }
+    .profile-img-landscape {
+        display: block;
+        margin-top: 4rem;
+        margin-bottom: 0;
+    }
+    .about-me-section:hover .profile-img-landscape {
+        opacity: 1;
+    }
+}
+
+/* The Odin Project Section */
+
+.the-odin-project-section {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.the-odin-project-heading, .the-odin-project-paragraph {
+    text-align: left;
+}
+
+.the-odin-project-logo {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+@media(max-width: 1000px) {
+    .the-odin-project-section {
+        width: 75%;
+    }
+    .the-odin-project-heading, .the-odin-project-paragraph {
+        text-align: center;
+    }
+}
+
+/* Footer */ 
+
+footer {
+    background-color: var(--clr-special);
+    padding: 2rem;
+}
+
+.footer-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container-footer {
+    display: flex;
+    align-items: center;
+}
+
+.footer-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-list > li {
+    margin-top: 0.75rem;
+}
+
+@media(max-width: 1000px) {
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+/* Utility Classes */
+
+.fs-li {
+    font-size: var(--fs-400);
+}
+
+.fs-heading {
+    font-size: var(--fs-600);
+}
+
+.fs-copyright {
+    font-size: var(--fs-200);
+}
+
+.fw-semi-bold {
+    font-weight: var(--fw-semibold);
+}
+
+.fw-bold {
+    font-weight: var(--fw-bold);
+}
+
